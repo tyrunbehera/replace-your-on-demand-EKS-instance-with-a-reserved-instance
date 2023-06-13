@@ -1,0 +1,53 @@
+To replace your on-demand EKS instance with a reserved instance for 1 year, you can follow these steps:
+
+Determine the specifications of the reserved instance you want to purchase. Make sure it matches or exceeds the specifications of your current on-demand instance (in this case, c6i.xlarge). You can find the available reserved instance types and pricing on the Amazon EC2 Reserved Instances Pricing page.
+
+Go to the AWS Management Console and navigate to the EC2 service.
+
+In the EC2 dashboard, click on "Reserved Instances" in the left-hand navigation pane.
+
+Click on the "Purchase Reserved Instances" button.
+
+On the "Purchase Reserved Instances" page, select the region where your EKS instance is deployed.
+
+Choose the "Standard" offering class. This class provides the most flexibility in terms of instance utilization and availability zone coverage.
+
+Select the reserved instance type that matches or exceeds the specifications of your current on-demand instance (c6i.xlarge).
+
+Choose the desired duration for the reserved instance. In this case, select "1 Year."
+
+Review the pricing details and click on the "Add to Cart" button.
+
+On the "Review Instance Details" page, confirm that the instance type, term, and pricing information are correct.
+
+Select the number of reserved instances you want to purchase. Since you want to replace your existing on-demand instance, select the appropriate quantity.
+
+Click on the "Add to Cart" button to proceed.
+
+On the "Purchase Confirmation" page, review the details once again to ensure everything is correct.
+
+Click on the "Proceed to Checkout" button.
+
+On the "Checkout" page, select your payment method and provide the necessary billing information.
+
+Once you've reviewed and confirmed the purchase details, click on the "Place your order" button.
+
+After the purchase is complete, you will receive a confirmation of your reserved instance purchase.
+
+Now that you have a reserved instance, you can modify your EKS cluster to use it.
+
+Go to the Amazon EKS console.
+
+Select your cluster, and in the cluster details page, click on the "Configuration" tab.
+
+Under the "Compute" section, click on the "Update" button.
+
+In the "Update compute configuration" dialog, select the "Use existing EC2 instances" option.
+
+From the "Instances" dropdown, select your existing on-demand instance.
+
+Under "Advanced options," select the reserved instance you just purchased.
+
+Click on the "Update" button to apply the changes.
+
+The cluster will now be updated to use the reserved instance instead of the on-demand instance
